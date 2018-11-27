@@ -9,7 +9,9 @@
     <div class="col">
     <h1>Queen</h1>
     <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
+      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>
+      {% if not loop.last %}
+      {% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
       <br> Published {{ publish_date }}
     </p>
     </div>
@@ -17,15 +19,26 @@
   <div class="row">
     <div class="col">
     <p>
-      Lucas ipsum dolor <a href="detail-page.html">link to detail-page.html</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
+      Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music. <a href="https://en.wikipedia.org/wiki/Queen_(band)"> -Wikipedia</a> 
     </p>
-      <ul> 
-        {% for book in books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
+    <p>
+        {% for album in albums %}
+          <li>{{ album.title }}, {{ album.year }}, {{ album.image }}</li>
         {% else %}
-          <li>This would display if the 'books' collection were empty</li>
+          <li>This would display if the 'albums' collection were empty</li>
         {% endfor %}
-     </ul>
+
+    <ul class="list-unstyled">
+      <li class="media">
+      <img class="mr-3" src="../assets/img/albums/Queen_A_Day_at_the_Races.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">List-based media object</h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+
+      
+
+    </p>
     </div>
   </div>
 </div>
