@@ -22,21 +22,17 @@
       Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music. <a href="https://en.wikipedia.org/wiki/Queen_(band)"> -Wikipedia</a> 
     </p>
     <p>
-        {% for album in albums %}
-          <li>{{ album.title }}, {{ album.year }}, {{ album.image }}</li>
-        {% else %}
-          <li>This would display if the 'albums' collection were empty</li>
-        {% endfor %}
+<div>
 
-    <ul class="list-unstyled">
-      <li class="media">
-      <img class="mr-3" src="../assets/img/albums/Queen_A_Day_at_the_Races.jpg" alt="Generic placeholder image">
+<ul class="list-unstyled">
+  <li class="media">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">{{% for title in albums }}</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
-
-      
+  </li>
+</ul>
 
     </p>
     </div>
