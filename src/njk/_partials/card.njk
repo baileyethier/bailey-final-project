@@ -1,0 +1,8 @@
+{% for member in members %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src= "assets/img/members/{{ member.imagebw }}" alt="Card image cap">
+  <h5 class="card-title">{{ member.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments}}</h6>
+    <a class="card-link" href="{{ member.detailpage }}">Learn More</a>
+</div>
+{% endfor %}

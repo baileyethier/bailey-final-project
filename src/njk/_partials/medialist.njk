@@ -1,0 +1,11 @@
+{% for album in albums %}
+<ul class="list-unstyled">
+  <li class="media">
+    <img class="mr-3" src= "assets/img/albums/{{ album.image }}" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ album.title}}</h5>
+      <p>{{ album.year}}</p>
+    </div>
+  </li>
+</ul>
+{% endfor %}

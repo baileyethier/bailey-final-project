@@ -10,15 +10,19 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
   {% include "_partials/nav.njk" %}
 
-  {% block content %}  {% endblock %}
+  {% include "_partials/jumbotron.njk" %}
 
-  {% include "_partials/footer.njk" %}
+  {% block content %}  {% endblock %}
+ 
 
   <script src="js/jquery.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
+
+   {% include "_partials/footer.njk" %}
 </body>
 </html>
