@@ -11,70 +11,31 @@
 <h1 class="queentitle">Queen</h1>
 
 <div class="row">
-  <p class="author">By {% for author in authors %}
-    <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>
-        {% if not loop.last %}
-        {% if loop.revindex0 == 1 %} {% else %}, {% endif %}{% endif %} {% endfor %}
-  <br> Published {{ publish_date }} </p>
-</div>
-  
-
-<div class="row">
-    <p>
-      Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music. <a href="https://en.wikipedia.org/wiki/Queen_(band)"> -Wikipedia</a> 
-    </p>
-</div>
-
-<div class="row">
-  <div class="col-md-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-sm-12">
+       <p class="author">By {% for author in authors %}
+      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>
+          {% if not loop.last %}
+          {% if loop.revindex0 == 1 %} {% else %}, {% endif %}{% endif %} {% endfor %}
+    <br> Published {{ publish_date }} </p>
+        <p>
+          Queen are a British rock band that formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals), and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock, into their music. <a href="https://en.wikipedia.org/wiki/Queen_(band)"> -Wikipedia</a> 
+        </p>
     </div>
-  </div>
-  <div class="col-md-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-    {# <div class="col-md-7 col-lg-7 col-xl-7"> 
       {% include "_partials/card.njk" %}
-    </div> #}
-    <div class="col-md-4 col-lg-5 col-xl-5">
+    </div>
+    
+  </div>
+
+  
+  <div class="col-md-3">
+    <h3> Discography </h3>
       {% include "_partials/medialist.njk" %}
     </div>
 </div>
 
-</div>
-</div>
+
 </div>
 
  {% endblock%}

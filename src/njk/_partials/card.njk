@@ -1,9 +1,16 @@
 {% for member in members %}
-<div class="card">
+    <div class="col-sm-6">
+  
+      <div class="card mb-4">
+        <img class="img-fluid" src= "assets/img/members/{{ member.imagebw }}" alt="Queen Member">
+        <div class="card-body">
+          <h5 class="card-title">{{ member.name }}</h5>
+          <p class="card-text">Tenure: {{ member.tenure }}</p>
+          <p class="card-text">Instruments: {{ member.instruments }}</p>
+          <a href="{{ member.slug }}" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
 
-  <img class="class=img-fluid" src= "assets/img/members/{{ member.imagebw }}" alt="Card image cap">
-  <h5 class="card-title">{{ member.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments}}</h6>
-    <a class="card-link" href="{{ member.slug }}">Learn More</a>
-</div>
-{% endfor %}
+
